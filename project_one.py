@@ -28,7 +28,7 @@ plt.show()
 #Pitch Mix for Shota Imanaga
 # Data source: FanGraphs Baseball (https://www.fangraphs.com/)
 pitch_data = {
-    'Pitch Type': ['Four-Seam Fastball', 'Split-Finger', 'Sweeper', 'Changeup', 'Curveball'],
+    'Pitch Type': ['Four-Seam Fastball', 'Splitter', 'Sweeper', 'Changeup', 'Curveball'],
     'Pitches Thrown': [1347, 792, 199, 101, 84],
     'Percentage': [52.0, 30.6, 7.7, 3.9, 3.2]
 }
@@ -43,19 +43,19 @@ plt.show()
 # Additional Pitch Characteristics
 print("Pitch Velocities:")
 print("Four-Seam Fastball: 92 mph")
-print("Split-Finger: 83 mph")
+print("Splitter: 83 mph")
 print("Sweeper: 82 mph")
 print("Changeup: 82 mph")
 print("Curveball: 73 mph")
 
 # Ohtani's performance against fastballs
 # Data source: Baseball Savant (https://www.baseballsavant.com/)
-velocity_ranges = ['90-94 mph', '95+ mph', '95+ mph (Upper Zone)']
-batting_avg = [0.304, 0.360, 0.360]  # Using overall avg for 90-94 mph as we lack specific data
-on_base_pct = [0.412, 0.467, 0.467]  # OBP, estimated for 90-94 mph
-slugging_pct = [0.654, 0.480, 0.480]  # SLG, estimated for 90-94 mph
+velocity_ranges = ['90-94 mph', '95+ mph']
+batting_avg = [0.304, 0.360]  # Using overall avg for 90-94 mph 
+on_base_pct = [0.412, 0.467]  # OBP, estimated for 90-94 mph
+slugging_pct = [0.654, 0.480]  # SLG, estimated for 90-94 mph
 
-# Create the plot
+# Plot
 fig, ax = plt.subplots(figsize=(10, 6))
 
 x = np.arange(len(velocity_ranges))
@@ -68,7 +68,7 @@ ax.bar(x + width, slugging_pct, width, label='Slugging Percentage', color='#134A
 
 # Customize the plot
 ax.set_ylabel('Percentage')
-ax.set_title("Shohei Ohtani's Performance Against High-Velocity Fastballs")
+ax.set_title("Shohei Ohtani's Performance Against Fastballs")
 ax.set_xticks(x)
 ax.set_xticklabels(velocity_ranges)
 ax.legend()
