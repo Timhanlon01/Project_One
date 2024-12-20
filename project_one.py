@@ -1,16 +1,27 @@
 # Project_One
-# Batting stats for a year range 
+# How has Ohtani's average changed throughout the course of his career?
+# Imports
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import os
 
-# Path
-file_path = "ShoheiOhtani_BATTING.csv"
+# Path to the CSV file
+file_path = "C:/Users/timha/Downloads/ShoheiOhtani_BATTING.csv"
 
-# CSV as a DataFrame
+# Read the CSV file into a DataFrame
 Shohei_Ohtani = pd.read_csv(file_path)
-print(Shohei_Ohtani.head())
+
+# Set option to display all rows
+pd.set_option('display.max_rows', None)
+
+# Print the entire DataFrame
+print(Shohei_Ohtani)
+
+
+
+
+
+
 
 
 
