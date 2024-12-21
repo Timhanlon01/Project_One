@@ -13,12 +13,19 @@ Shohei_Ohtani = pd.read_csv(file_path)
 
 # Set option to display all rows
 pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', None)
 
 # Print the entire DataFrame
 print(Shohei_Ohtani)
 
+# Groupby statement for BA
+avg_stats = Shohei_Ohtani.groupby('Year')['BA'].mean()
 
-
+# Printing BA stats
+print("\nAverage Batting Statistics by Year:")
+print(avg_stats)
 
 
 
