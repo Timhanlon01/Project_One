@@ -1,3 +1,33 @@
+import pandas as pd
+
+# File path
+hitters_path = r"C:\Users\timha\OneDrive\Documents\Project_One\Hitters.csv"
+mlb_elo_latest_path = r"C:\Users\timha\OneDrive\Documents\Project_One\mlb_elo_latest.csv"
+hitters_df = pd.read_csv(hitters_path)
+mlb_elo_latest_df = pd.read_csv(mlb_elo_latest_path)
+
+# Set option to display all rows
+pd.set_option('display.max_rows', None)
+
+# Print data
+print("Hitters.csv Data:")
+print(hitters_df)
+
+print("\nmlb_elo_latest.csv Data:")
+print(mlb_elo_latest_df)
+
+# Aggregating OPS by team
+team_ops = hitters_df.groupby('Team')['OPS'].mean().reset_index()
+team_ops.rename(columns={'OPS': 'Avg_OPS'}, inplace=True)
+
+# Runs scored from mlb_elo-latest
+team_runs = mlb_elo_latest_df[['Team1', 'Runs_Scored']].rename(columns={'Team1': 'Team'})
+
+# Combine OPS and runs scored data
+merged_df = pd.merge(team_ops, team_runs, on='Team', how='inner')
+
+# Calculating OPS-to-Runs Ratio
+
 
 
 

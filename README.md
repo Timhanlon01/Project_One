@@ -1,6 +1,6 @@
 # Project_One
 # Intro
-How has Ohtani's average changed throughout his career?
+How does the average OPS (On-base Plus Slugging) of players on a team relate to the total runs scored by that team in the season?
 # Features 
 
 # conclusion
