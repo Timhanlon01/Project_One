@@ -14,7 +14,6 @@ print(mlb_elo_latest_df.columns)
 
 # Combine the datasets
 combined_df = pd.concat([hitters_df, mlb_elo_latest_df], axis=1)
-
 print("\nShape of combined data:", combined_df.shape)
 print("\nColumns in combined data:")
 print(combined_df.columns)
