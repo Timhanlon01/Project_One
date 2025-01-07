@@ -1,6 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 # File path
 hitters_path = r"C:\Users\timha\OneDrive\Documents\Project_One\Hitters.csv"
 mlb_elo_latest_path = r"C:\Users\timha\OneDrive\Documents\Project_One\mlb_elo_latest.csv"
