@@ -23,8 +23,8 @@ This project analyzes MLB data using Python, combining hitter statistics and MLB
 This script does the following:
 1. Shows what's in the datasets
 2. Figures out OPS averages for each league and how they relate to Runs
-3. Makes a table showing OPS and Runs for different Leagues and Divisions
-4. Creates two pictures:
+3. Table showing OPS and Runs for different Leagues and Divisions
+4. Created two pictures:
     - A bar chart showing average OPS for each league
     - A scatter plot showing how OPS and Runs are connected
 
@@ -34,4 +34,5 @@ This script does the following:
 
 ## Conclusion
 - What I learned from this project is how to use Kaggle, adding CSV files, combining datasets using Pandas, calculating data and creating a pivot table and lastly using matplotlib to create a bar graph and a scatter plot
+- A problem I had was trying to find true data
 - The answer to my question, does OPS influence Runs? Yes, if you have a higher OPS you tend to have more runs too
